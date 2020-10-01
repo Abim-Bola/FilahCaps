@@ -1,0 +1,11 @@
+<div class="card-deck">
+<% products.forEach(function(product) { %>
+    
+        <div class="card">
+          <img class="card-img-top" src="<%= product.image %>" alt="Card image cap" style="width: 50%px; height:50%">
+          <div class="card-body">
+            <h5 class="card-title"><%= product.productName %></h5>
+            <p class="card-text"><%= product.price %></p> 
+        </div>
+    <%})%>
+</div>
