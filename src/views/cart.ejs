@@ -1,0 +1,40 @@
+<%- include ("partials/message"); %>
+ 
+
+<div class="container" style="padding-left: 10%; padding-right: 10%; ">
+  <div class="row" style="background-color: aqua; border: black 2px solid;">
+      <div class="col-8">
+          <table style="width:100%">
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+              </tr>
+<% if(products) { %>
+
+  <% for(var i = 0; i < products.length; i++) { %>
+
+            <tr mt-5>
+              <td><img src="<%= products[i].item.image %>" alt="filahcaps" height="100px" width="100px"></td>
+              <td><%= products[i].item.productName %></td>
+              <td><%= products[i].item.price %></td>
+              <td>
+                <form>
+                  <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                  <input type="number" id="number" value="0" />
+                  <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                </form>
+              </td>
+            </tr>
+           
+          
+  <% } %>
+
+<% } %>
+
+</table>
+</div>
+<div class="col-4">col-4</div>
+</div>
+</div>

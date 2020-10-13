@@ -40,7 +40,7 @@ cloudinary.config({
                 res.send(err);
             }
             // Redirect
-            res.redirect('/');
+            res.redirect('/product/uploadproduct');
         });
     });
 },
