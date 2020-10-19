@@ -32,8 +32,7 @@ const userController = {
 
       cart.add(product, productId);
       req.session.cart = cart;
-      req.flash("success_msg", "Added to cart");
-      res.render("cart", {products: cart.generateArray});
+      res.redirect("/user/cart");
      });
     },
 

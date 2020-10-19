@@ -9,7 +9,7 @@
             <h5 class="card-title"><%= product.productName %></h5>
             <p class="card-text"><%= product.price %></p>
              <div class="btn-group">
-            <a href="/user/add-to-cart/<%=product._id%>"><button type="button" class=" btn btn-outline-primary"> Add to cart
+            <a href="/user/add-to-cart/<%= product._id %>"><button type="button" class=" btn btn-outline-primary"> Add to cart
                 <i  class="fas fa-shopping-cart"></i>
             </button></a>
           </div>
@@ -19,6 +19,5 @@
         
     
     <%})%>
-
-
+   
     

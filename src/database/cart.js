@@ -10,10 +10,13 @@ module.exports = function Cart(oldCart){
     this.add = function(item, id){
       var storedItem = this.items[id];
 
+      //add a new product
       if(!storedItem){
-          storedItem =  {item: item, qty: 0, price: 0};
+          storedItem =  {item: item, qty: 1, price: 0};
           this.items[id] = storedItem;
+          
       } else {
+        //add quantity  to an existing product
          storedItem.qty++;
          storedItem.price = storedItem.item.price * storedItem.qty;
          this.totalQty++;
