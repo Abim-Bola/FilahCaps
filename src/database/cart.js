@@ -4,6 +4,7 @@ module.exports = function Cart(oldCart){
     //initialize the cart
     this.items = oldCart.items || {}; 
     this.totalQty = oldCart.totalQty || {}; 
+
     this.totalPrice = oldCart.totalPrice || {}; 
 
     //add new items to the cart by creating an add function
@@ -12,6 +13,7 @@ module.exports = function Cart(oldCart){
 
       //add a new product
       if(!storedItem){
+            
           storedItem =  {item: item, qty: 1, price: 0};
           this.items[id] = storedItem;
           

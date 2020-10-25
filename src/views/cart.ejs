@@ -1,8 +1,8 @@
 <%- include ("partials/message"); %>
 
-<div class="container" style="padding-left: 10%; padding-right: 10%; ">
-  <div class="row" style="background-color: white; border: black 2px solid;">
-      <div class="col-8">
+<div class="container mt-5">
+  <div class="row" style="background-color: white;">
+      <div class="col-lg-8 col-md-8 col-sm-8">
           <table style="width:100%">
               <tr>
                 <th>Product</th>
@@ -21,7 +21,7 @@
               </td>
               <td><%= products[i].item.price %></td>
               <td><%= products[i].qty %></td>
-              <td><%= products[i].totalPrice %></td>
+              <td><%= products[i].price %></td>
       
             </tr>
            
@@ -31,8 +31,18 @@
 <% } %>
 
 </table>
+</div >
+<div class="col-lg-4 col-md-4 col-sm-4" style="background-color: #f4f4f4;">
+  <tr>
+    <th><hr style="Border: 5px solid black; background-color: black;"></th>
+  </tr>
+  <tr>
+    <td>Cart total: <%= totalPrice %> <br> Shipping and taxes calculated at checkout</td>
+    <td><a href="/user/checkout"><button type="button" class=" btn btn-dark mt-5" style="color: white;"> Checkout <i class="fas fa-lock ml-2"></i>
+  </button></a></td>
+  </tr>
 </div>
-<div class="col-4">col-4</div>
+
 </div>
 </div>
 

@@ -1,60 +1,49 @@
 body{
     height:100%; 
     margin:0;
-    background-color:black;
+    background-color: white;
+    padding-left: 5%;
+    padding-right: 5%;
 }
-.logo{
-    color: black;
+
+.card-text{
+  color: red;
 }
 
-.index{
-    padding: 1% 5.5%;
-} 
+.main-image{
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
 
-/* .carousel img {
-    max-height: 500px;
-    margin: 0 auto;
-    width: 100%;
-} */
-.carousel-item {
-    width: 100%;
-    height: 500px; /* example */
-  }
+li{
+padding-right: 10px;
+}
+
+.page-footer {
+   padding-left: 0%;
+   padding-right: 0%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+
+
+
   
-  .carousel-item img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .card-group{
-      margin-top: 1%;
-  }
-
-  .index-jumbo{
-      margin-top: 5%;
-      margin-bottom: 0%;
-      padding-bottom: 2%;
-      text-align: center;
-      background-color: white;
-  }
   
-  .card-img-top{
-      height: 60%;
-  }
 
-  .card{
-      margin-right: 3%;
-       
-  }
+  
   
 
   th, td {
-    padding: 15px;
+    padding: 10px;
   }
 
-  h1{
-      color: white;
-  }
+
 
  
 

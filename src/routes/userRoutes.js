@@ -12,6 +12,8 @@ const userRouter = express.Router();
 userRouter.get("/filahcaps", userController.allProducts);
 userRouter.get("/add-to-cart/:id", userController.addProduct); 
 userRouter.get("/cart", userController.displayProduct); 
+userRouter.get("/singlecap/:id", userController.singlecap);
+userRouter.get("/checkout", userController.checkout);  
 
 
 

@@ -42,7 +42,24 @@ const userController = {
        }
 
        var cart = new Cart(req.session.cart);
-       res.render("cart", {products: cart.generateArray()});
+       res.render("cart", {products: cart.generateArray(), totalPrice: cart.totalPrice});
+    },
+
+    singlecap(req, res){
+        productId = req.params.id;
+
+        Product.findById(productId, function(err, products){
+            if(err){
+                res.send("hello");
+            }else{
+
+            res.render("singlecap", {products: products});
+            }
+        });
+    },
+
+    checkout(req, res){
+        res.render("checkout");
     }
 
     
