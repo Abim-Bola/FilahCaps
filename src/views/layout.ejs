@@ -16,18 +16,24 @@
 </head>
 
 <body>
-  <%- include("partials/header"); %>
-  <%- body %>
+  
 
 
 
 
+  <div class="wrapper">
+
+    <%- include('partials/header') %>
+    <main><%- body %></main>
+    <%- include('partials/footer') %>
+
+</div>
 
 
 
 
  
-  <%- include("partials/footer"); %>
+  
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   
@@ -43,5 +49,6 @@
     <script src="/javascript.js"></script>
 
 </body>
+
 
 </html>

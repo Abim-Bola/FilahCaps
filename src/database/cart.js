@@ -14,7 +14,7 @@ module.exports = function Cart(oldCart){
       //add a new product
       if(!storedItem){
             
-          storedItem =  {item: item, qty: 1, price: 0};
+          storedItem =  {item: item, qty: 1, price: item.price};
           this.items[id] = storedItem;
           
       } else {

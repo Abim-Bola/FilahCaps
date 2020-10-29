@@ -3,14 +3,14 @@
 <% products.forEach(function(product) { %>
     <!-- <div class="row card-deck"> -->
         <a href="/user/singlecap/<%= product._id %>" style="text-decoration: none;">
-        <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 mt-5">
     <div class="card">
           <img class="card-img-top" src="<%= product.image %>" alt="Card image cap" style="width: 100%; height: 180px;">
           <div class="card-body">
-            <h5 class="card-title" style="color: black;"><%= product.productName %></h5>
-            <p class="card-text"><%= product.price %></p>
+            <h5 class="card-title" style="color: black;"><%= product.productName %> Cap</h5>
+            <p class="card-text">₦<%= product.price %></p>
         </a>
-             <div class="btn-group">
+             <div class="btn-group mt-2">
             <a href="/user/add-to-cart/<%= product._id %>"><button type="button" class=" btn btn-outline-primary"> Add to cart
                 <i  class="fas fa-shopping-cart"></i>
             </button></a>

@@ -12,6 +12,7 @@ const userController = {
 
     allProducts(req, res){
         Product.find({}, function(err, products){
+            console.log('allProudcts: ', products);
       if(err){
           res.send(err);
       }else{
@@ -48,12 +49,13 @@ const userController = {
     singlecap(req, res){
         productId = req.params.id;
 
-        Product.findById(productId, function(err, products){
+        Product.findById(productId, function(err, product){
+            console.log('singleProduct: ', product);
             if(err){
                 res.send("hello");
             }else{
 
-            res.render("singlecap", {products: products});
+            res.render("singlecap", {product: product});
             }
         });
     },

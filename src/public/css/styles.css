@@ -7,7 +7,7 @@ body{
 }
 
 .card-text{
-  color: red;
+  color: green;
 }
 
 .main-image{
@@ -31,8 +31,13 @@ padding-right: 10px;
   color: black;
 }
 
-
-
+#sticky-footer {
+  
+  position: fixed;
+  height: 50px;
+  bottom: 0;
+  width: 100%;
+}
   
   
 

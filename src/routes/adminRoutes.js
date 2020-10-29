@@ -6,9 +6,9 @@ var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart();
 
 
-adminRouter.get("/uploadproduct", adminController.getProductUpload);
-adminRouter.post("/upload", multipartMiddleware , adminController.postProduct);
 
+adminRouter.post("/upload", multipartMiddleware , adminController.postProduct);
+adminRouter.get("/uploadproduct", adminController.getProductUpload);
 
 
 module.exports = adminRouter;
