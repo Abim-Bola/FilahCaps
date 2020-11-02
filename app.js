@@ -75,7 +75,7 @@ app.get("/", function(req, res){
     app.use("/user", userRouter);
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, console.log("server started on" + " " + PORT));
 
