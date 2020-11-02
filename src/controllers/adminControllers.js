@@ -39,8 +39,7 @@ cloudinary.config({
             if(err){
                 res.send(err);
             }
-            // Redirect
-            res.redirect('/product/uploadproduct');
+            res.redirect("/admin/uploadproduct");
         });
     });
 },

@@ -11,7 +11,7 @@ const cloudinary = require('cloudinary');
 const userController = {
 
     allProducts(req, res){
-        Product.find({}.limit(5), function(err, products){
+        Product.find({}, function(err, products){
             console.log('allProudcts: ', products);
       if(err){
           res.send(err);

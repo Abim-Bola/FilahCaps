@@ -1,6 +1,7 @@
 //jshint esversion:6
 require('dotenv').config();
 const express = require("express");
+const Product = require("./src/database/productModel");
 const ejs = require("ejs");
 var path = require('path');
 const flash = require("connect-flash");
@@ -58,7 +59,15 @@ next();
 
 
 app.get("/", function(req, res){
-   res.render("index");
+  Product.find({}, function(err, products){
+     if(err){
+      res.send(err);
+     }else{
+       res.render("index", {products: products});
+     }
+     
+  })
+  .limit(4);
     });
 
 
