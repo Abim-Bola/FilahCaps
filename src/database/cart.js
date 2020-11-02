@@ -34,6 +34,12 @@ module.exports = function Cart(oldCart){
           array.push(this.items[id]);
       }
       return array;
+    },
+
+    this.removeItem = function(id) {
+      this.totalQty -= this.items[id].qty;
+      this.totalPrice -= this.items[id].price;
+      delete this.items[id];
     }
 
 };

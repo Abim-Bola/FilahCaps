@@ -8,6 +8,7 @@ const cloudinary = require('cloudinary');
 
 
 
+
 const userController = {
 
     allProducts(req, res){
@@ -62,6 +63,15 @@ const userController = {
 
     checkout(req, res){
         res.render("checkout");
+    },
+
+    deleteProduct(req, res) {
+        var productId = req.params.id;
+        var cart = new Cart(req.session.cart ? req.session.cart : {});
+      
+        cart.removeItem(productId);
+        req.session.cart = cart;
+        res.redirect('/user/cart');
     }
 
     

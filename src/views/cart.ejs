@@ -5,6 +5,7 @@
       <div class="col-lg-8 col-md-8 col-sm-8">
           <table style="width:100%">
               <tr>
+                <th></th>
                 <th>Product</th>
                 <th>Price</th>
                 <th>Quantity</th>
@@ -15,6 +16,7 @@
   <% for(var i = 0; i < products.length; i++) { %>
 
             <tr>
+              <td><a href="/user/delete/<%=products[i].item._id%>"><button><i class="far fa-trash-alt"></i></button></a></td>
               <td>
                 <img src="<%= products[i].item.image %>" alt="filahcaps" height="100px" width="100px">
                 <p><%= products[i].item.productName %></p>
